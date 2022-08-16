@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/run" method="post">
+        <input type="text" id="lname" name="lname" value="Search"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <h1>{% block title %} Messages {% endblock %}</h1>
+        <div class='message'>
+            <h3>{{ data['first'] }}</h3>
+            <p>{{ data['last'] }}</p>
+        </div>
+{% endblock %}
